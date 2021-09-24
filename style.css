@@ -1,0 +1,213 @@
+:root {
+  --roboto: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  min-height: 100vh;
+  background: #333333 url("./assets/img/background.jpg");
+  background-position: center 75%;
+  background-size: cover;
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.clock {
+  width: 320px;
+  height: 320px;
+  border: 20px solid #dedede;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4) url("./assets/img/clock.png");
+  background-size: cover;
+  margin: 140px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #EFEFEF,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock__face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+
+.hand {
+  width: 80%;
+  height: 6px;
+  background: linear-gradient(to right, #000000 50%, transparent 50%);
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  width: 60%;
+  left: 20%;
+}
+
+.second-hand {
+  height: 3px;
+  background: linear-gradient(to right, #ED0600 50%, transparent 50%);
+}
+
+.weather {
+  width: 230px;
+  height: 250px;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 137px;
+  left: calc(50% - 330px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 5px solid #dedede;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: var(--roboto);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.weather-icon {
+  font-size: 48px;
+}
+
+.city {
+  width: 200px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+  font-family: var(--roboto);
+  font-weight: 400;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.city:hover {
+  color: #dedede;
+  cursor: pointer;
+  border-bottom: 2px solid #ffffff50;
+}
+
+.city:focus {
+  color: #000000;
+  border-bottom: 2px solid #ffffff50;
+}
+
+.electronic-clock {
+  display: block;
+  width: 660px;
+  height: 50px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 67px;
+  left: calc(50% - 330px);
+  border: 5px solid #dedede;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.4);
+  font-family: var(--roboto);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background-color: #000000 trasparent;
+  box-shadow: 0 -5px 5px -5px #cbd5de;
+}
+
+.footer-container {
+  width: 660px;
+  margin: 0 auto;
+  padding: 0 65px 0 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github {
+  display: block;
+  width: 270px;
+  height: 45px;
+  padding-left: 45px;
+  background-image: url('./assets/svg/github.svg');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: #cbd5de;
+  font-family: var(--roboto);
+  font-size: 16px;
+  line-height: 45px;
+  transition: 0.3s;
+}
+
+.github:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(190deg) brightness(105%) contrast(107%);
+}
+
+.rss {
+  display: block;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 86px;
+  height: 32px;
+  background-image: url('./assets/svg/rss.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 50px;
+  transition: 0.3s;
+}
+
+.rss-year {
+  position: relative;
+  top: 15px;
+  left: 85px;
+  font-family: var(--roboto);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -2px;
+  color: #cbd5de;
+  line-height: 0.9;
+  transition: 0.3s;
+}
+
+.rss:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(190deg) brightness(105%) contrast(107%);
+}
+
+.rss:hover .rss-year {
+  letter-spacing: 0;
+}
